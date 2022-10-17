@@ -1,5 +1,7 @@
 package se.lexicon;
 
+import java.util.Arrays;
+
 public class ArrayExample {
 
   private static String[] names = {"Simon", "Mehrdad", "Marcus", "Åsa"};
@@ -16,6 +18,10 @@ public class ArrayExample {
     return "Error: No match";
 
   }
+
+  // write a method to add a new name on existing array
+  //...
+
 
 
 }
