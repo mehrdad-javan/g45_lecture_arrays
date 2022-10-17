@@ -8,7 +8,7 @@ public class ArrayDemo {
     int[] numbers = new int[]{2, 4, 6, 8};
     char[] letters = {'J', 'A', 'V', 'A'};
 
-    ex4();
+    sortNumbers();
 
   }
 
@@ -35,6 +35,7 @@ public class ArrayDemo {
     //numbers[6] = 10; // throws ->  Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6
     printArray(numbers);
   }
+
   public static void printArray(int[] numbers) {
     int size = numbers.length;
     for (int i = 0; i < size; i++) {
@@ -67,20 +68,51 @@ public class ArrayDemo {
 
 
   }
+
   public static void ex4() {
     int[] numbers = {2, 3, 5, 6};
 
     // we can iterate forward and backward
-    for (int i= 0; i< numbers.length; i++){
+    for (int i = 0; i < numbers.length; i++) {
       System.out.println(numbers[i]);
     }
 
     // we can only iterate from start to finish
-    for (int number : numbers){
+    for (int number : numbers) {
       System.out.println(number);
     }
 
   }
 
+  // write a program to sort the defined array in ascending order
+  public static void sortNumbers() {
+    int[] numbers = {5, 2, 3, 4, 7};
+    int size = numbers.length;
+
+    for (int i = 0; i < size; i++) {
+
+      for (int j = i + 1; j < size; j++) {
+        //  compare each element of the array to all remaining elements
+        if (numbers[i] > numbers[j]) {
+          // swapping array elements
+          int tmp = numbers[i]; // 5
+          numbers[i] = numbers[j]; // numbers[0] = 2
+          numbers[j] = tmp; // numbers[1] = 5
+          // {2, 5, 3, 4, 7}
+          // {2, 3, 5, 4, 7}
+          // {2, 3, 4, 5, 7}
+
+        } // if
+
+      } // for j
+
+    } // for i
+
+    for (int number : numbers) {
+      System.out.println(number);
+    }
+
+
+  }
 
 }
